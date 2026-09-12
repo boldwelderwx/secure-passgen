@@ -1,0 +1,21 @@
+# Rust fordítási kimenet
+/target
+**/*.rs.bk
+
+# IDE és szerkesztő fájlok
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Benchmark és teszt fájlok (amik nem részei a forráskódnak)
+*.log
+*.csv
+oKy
+src_backup_*
+mega_memory_*
+mega_1m_*
+mega_2m_*
+
+# Minták, amik nem kellenek a végfelhasználónak
+documentation_v2/.samples/

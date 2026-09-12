@@ -1,0 +1,32 @@
+[package]
+name = "secure-passgen"
+version = "3.0.0"
+edition = "2021"
+authors = ["Boldwelder & Adjutans-1"]
+description = "Military-grade fool-proof password generator with i18n and Unicode support"
+license = "MIT"
+
+[dependencies]
+clap = { version = "4.4", features = ["derive"] }
+dialoguer = "0.11"
+rand = "0.8"
+getrandom = { version = "0.2", features = ["std"] }
+sha2 = "0.10"
+colored = "2.1"
+csv = "1.3"
+chrono = "0.4"
+sys-info = "0.9"
+hostname = "0.3"
+unicode-normalization = "0.1"
+
+[dev-dependencies]
+tempfile = "3.8"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+
+[[bin]]
+name = "secure-passgen"
+path = "src/main.rs"
